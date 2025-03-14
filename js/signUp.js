@@ -60,7 +60,7 @@ document.querySelector("button").addEventListener("click", async (e) => {
             timer: 1000,
             showConfirmButton: false,
         }).then(() => {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         });
 
     } catch (error) {
