@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller | Add Product</title>
+    <link rel="stylesheet" href="../css/adminDashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../images/quickcart_logo.png" alt="">
+        </div>
+        <div class="sub-title">
+            Main Menu
+        </div>
+        <div class="side-links">
+            <ul>
+                <a href="">
+                    <li class="active"><img src="../images/icons8-product-24.png" alt="">Add Products</li>
+                </a>
+                <a href="">
+                    <li><img src="../images/icons8-product-management-24.png" alt=""> Update Inventory</li>
+                </a>
+                <a href="">
+                    <li>
+                        <img src="../images/icons8-warehouse-24.png" alt="">View Inventory
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="sub-title space">
+            General
+        </div>
+        <div class="side-links">
+            <ul>
+                <a href="index.html">
+                    <li><img src="../images/icons8-sign-out-24.png" alt=""> Sign Out</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="heading">
+                <img src="../images/icons8-product-24.png" alt=""> Add New Product
+            </div>
+            <div class="add-btn">
+                <button type="submit"><img src="../images/icons8-check-24.png" alt=""> Add Product</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="col-1">
+                <div class="general-info">
+                    <div class="col-heading">
+                        General Information
+                    </div>
+                    <div class="input-row">
+                        <label for="">Product Name</label>
+                        <input type="text" name="" id="" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="">Product Description</label>
+                        <textarea name="" id="" rows="6" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-heading">
+                    Upload Image
+                </div>
+                <div class="image-container">
+
+                    <div class="image-holder">
+                        <img src="" alt="" id="placeholder" class="placeholder">
+                    </div>
+                    <label class="Upload">Select Image 
+                    <input type="file" name="" id="Uploadbtn" class="Upload-btn" onchange="GetPreviewImage(event)">
+                </label>
+                </div>
+            </div>
+            <div class="col-1 row-2">
+                <div class="col-heading">
+                    Pricing & Stock
+                </div>
+                <div class="row-2-content">
+                    <div class="input-row ">
+                        <label for="">Price</label>
+                        <input type="text" name="" id="" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="">Stock</label>
+                        <input type="number" name="" id="" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 row-2">
+                <div class="col-heading">
+                    Category
+                </div>
+                <div class="input-row ">
+                    <label for="">Product Category</label>
+                    <select>    
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Food">Food</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="Uploadbtn" class="Upload-btn">
+    <script>
+       const uploadBtn = document.getElementById('Uploadbtn');
+       const placeholder = document.getElementById('placeholder');
+    
+       uploadBtn.onchange = (event) => {
+           const file = event.target.files[0];
+    
+           if (file) {
+               const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+               const maxSize = 2 * 1024 * 1024; // 2 MB
+    
+               if (!allowedTypes.includes(file.type)) {
+                   Swal.fire('Invalid file type', 'Please upload an image (JPEG, PNG, GIF).', 'error');
+                   return;
+               }
+    
+               if (file.size > maxSize) {
+                   Swal.fire('File too large', 'The file size should be less than 2MB.', 'error');
+                   return;
+               }
+    
+               placeholder.src = URL.createObjectURL(file);
+               placeholder.style.display = 'block';
+           } else {
+               placeholder.style.display = 'none';
+           }
+       };
+    </script>
+    
+<script type="module" src="../js/adminDashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

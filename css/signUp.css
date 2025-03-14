@@ -1,0 +1,85 @@
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    /* background-image: linear-gradient(to bottom, #B6E388, #D4F2C5, #E8F8FF); */
+    background-color: black;
+}
+
+.signup-content{
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px rgba(49, 49, 49, 0.6);
+}
+
+.signup-data{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.signup-data label{
+    margin: 0px;
+}
+
+.signup-data input{
+    border: none;
+    width: 400px;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+.name{
+    display: flex;
+    gap: 20px;
+}
+
+.name input{
+    width: 190px;
+}
+
+.signup-data input:focus {
+    border: 3px solid #80bad3;
+    outline: none;
+    box-shadow: 5px 5px 8px rgba(128, 186, 211, 0.6);
+}
+
+.signup-data span span{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    padding: 8px;
+    font-size: 16px;
+    color: black;
+    border-right: 1px rgb(190, 190, 190) solid;
+}
+
+#number{
+    border: none;
+    width: 356px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 6px;
+}
+
+button{
+    background-color: transparent;
+    border: 1px solid #71caf1;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+button:focus, button:active {
+    outline: none; 
+    border: 1px solid #71caf1 !important; 
+}

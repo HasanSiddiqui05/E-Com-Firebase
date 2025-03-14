@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display:flex;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    
+}
+.flex{
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+}
+.details{
+    width: 450px;
+}
+.section-1{
+    padding: 6rem 2rem 4rem 4rem;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+label,.title{
+    font-weight: 900;
+}
+.div-input{
+    margin-bottom: 10px;
+}
+input{
+    font-size: 1rem;
+    background-color: rgb(211, 210, 210);
+    border: none;
+    padding:1em;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.section-2{
+    position: relative;
+    background-image: url(https://plus.unsplash.com/premium_photo-1661551269670-b13b4944907a?q=80&w=1654&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.section-2 img{
+    height: 100vh;
+    object-fit: contain;
+    position: absolute;
+    
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.357);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h4{
+    color:white;
+    font-weight: 700;
+}
+.overlay h2{
+    color:white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-1,.section-2{
+    width:50vw;
+    height:100vh;
+}
+
+#signin-btn{
+    margin: 13px 0px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+    padding:1em;
+}
+
+
+  
