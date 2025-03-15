@@ -46,9 +46,9 @@ document.querySelector("button").addEventListener("click", async(e) => {
 
             if (role === "admin") {
                 sessionStorage.setItem("adminUID", user.uid);
-                loginConfirm("Admin Login", "adminDashboard.html")
+                loginConfirm("Admin Login", "html/adminDashboard.html")
             } else if (role === "user") {
-                loginConfirm("User Login", "homepage.html")
+                loginConfirm("User Login", "html/homepage.html")
                 sessionStorage.setItem("userUID", user.uid);
             } else {
                 loginError("Access Denied", "You don't have permission to log in.")
